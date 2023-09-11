@@ -5,9 +5,14 @@ VisualStudioVersion = 17.5.33516.290
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1.UnitTesting", "1.UnitTesting", "{05CDC1A0-B106-4A65-B183-46737E107176}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1.Basic", "1.Basic", "{828ADD9C-2BBB-4783-84EE-40388CCAB7F7}"
+EndProject
 Global
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{828ADD9C-2BBB-4783-84EE-40388CCAB7F7} = {05CDC1A0-B106-4A65-B183-46737E107176}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {13D3FD6D-6C89-455F-881B-07F2D846284E}
