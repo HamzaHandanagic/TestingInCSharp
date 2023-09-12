@@ -1,10 +1,3 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Xunit;
-
 namespace User.Tests.Unit
 {
     public class UserTests
@@ -84,16 +77,16 @@ namespace User.Tests.Unit
             // Assert
             Assert.Equal("John", fullName);
         }
-       
+
         /// <summary>
         /// With Mother Object pattern
         /// </summary>
         [Fact]
-        public void ObjectMother_FullName_ShouldConcatenateFirstAndLastName() 
+        public void ObjectMother_FullName_ShouldConcatenateFirstAndLastName()
         {
             // Arrange
             User user = UserMother.CreateValidUser();
-           
+
             // Act
             string fullName = user.Fullname;
 
