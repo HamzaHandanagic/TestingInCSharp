@@ -156,6 +156,20 @@ namespace Calculator.Tests.Unit
             result.Should().Be(final);
         }
 
+        /// <summary>
+        /// Use DataAttribute
+        /// Created JsonFileDataAttribute and read from json file: data.json
+        /// </summary>
+        [Theory]
+        [JsonFileData("data.json")]
+        public void CanAddAll(int value1, int value2, int expected)
+        {
+            var calculator = new Calculator();
+
+            var result = calculator.Add(value1, value2);
+
+            Assert.Equal(expected, result);
+        }
         #endregion
     }
 }
