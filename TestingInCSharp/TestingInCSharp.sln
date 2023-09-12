@@ -21,6 +21,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3.DeepDive", "3.DeepDive", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CurrencyConverter.API.Tests.Unit", "1.UnitTesting\3.DeepDive\CurrencyConverter.API.Tests.Unit\CurrencyConverter.API.Tests.Unit.csproj", "{3804730B-3598-43F9-A507-EFF1081DAF10}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CurrencyConverter.API", "1.UnitTesting\3.DeepDive\CurrencyConverter.API\CurrencyConverter.API.csproj", "{689ED0B6-0CA8-48D7-BBD2-23F21BD79882}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -47,6 +49,10 @@ Global
 		{3804730B-3598-43F9-A507-EFF1081DAF10}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3804730B-3598-43F9-A507-EFF1081DAF10}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3804730B-3598-43F9-A507-EFF1081DAF10}.Release|Any CPU.Build.0 = Release|Any CPU
+		{689ED0B6-0CA8-48D7-BBD2-23F21BD79882}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{689ED0B6-0CA8-48D7-BBD2-23F21BD79882}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{689ED0B6-0CA8-48D7-BBD2-23F21BD79882}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{689ED0B6-0CA8-48D7-BBD2-23F21BD79882}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -60,6 +66,7 @@ Global
 		{80EB3352-9204-442C-AB1A-B205C57E848E} = {B2607010-5F99-4AA4-88E6-C2A1C67EDADE}
 		{C8EBE7AC-6377-4CED-8666-7CB32C55A08A} = {05CDC1A0-B106-4A65-B183-46737E107176}
 		{3804730B-3598-43F9-A507-EFF1081DAF10} = {C8EBE7AC-6377-4CED-8666-7CB32C55A08A}
+		{689ED0B6-0CA8-48D7-BBD2-23F21BD79882} = {C8EBE7AC-6377-4CED-8666-7CB32C55A08A}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {13D3FD6D-6C89-455F-881B-07F2D846284E}
