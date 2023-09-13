@@ -1,18 +1,32 @@
 
+using CurrencyConverter.API.Database;
+using CurrencyConverter.API.Services;
+using CurrencyConverter.API.Repositories;
+using CurrencyConverter.API.Logger;
+
 namespace CurrencyConverter.API
 {
     public class Program
     {
-        public static void Main(string[] args)
+        public static async Task Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
 
             // Add services to the container.
-
+            var config = builder.Configuration;
             builder.Services.AddControllers();
             // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
+
+            builder.Services.AddSingleton(typeof(ILoggerAdapter<>), typeof(LoggerAdapter<>));
+
+
+            builder.Services.AddSingleton<IDbConnectionFactory>(_ =>
+            new NpgsqlConnectionFactory(config["Database:ConnectionString"]!));
+            builder.Services.AddSingleton<DatabaseInitializer>();
+            builder.Services.AddSingleton<IRatesRepository, RatesRepository>();
+            builder.Services.AddSingleton<IQuoteService, QuoteService>();
 
             var app = builder.Build();
 
@@ -27,6 +41,9 @@ namespace CurrencyConverter.API
 
 
             app.MapControllers();
+
+            var databaseInitializer = app.Services.GetRequiredService<DatabaseInitializer>();
+            await databaseInitializer.InitializeAsync();
 
             app.Run();
         }
