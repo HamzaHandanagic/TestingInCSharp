@@ -2,7 +2,6 @@
 using CurrencyConverter.API.Database;
 using CurrencyConverter.API.Services;
 using CurrencyConverter.API.Repositories;
-using CurrencyConverter.API.Logger;
 
 namespace CurrencyConverter.API
 {
@@ -19,11 +18,9 @@ namespace CurrencyConverter.API
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen();
 
-            builder.Services.AddSingleton(typeof(ILoggerAdapter<>), typeof(LoggerAdapter<>));
-
-
             builder.Services.AddSingleton<IDbConnectionFactory>(_ =>
             new NpgsqlConnectionFactory(config["Database:ConnectionString"]!));
+
             builder.Services.AddSingleton<DatabaseInitializer>();
             builder.Services.AddSingleton<IRatesRepository, RatesRepository>();
             builder.Services.AddSingleton<IQuoteService, QuoteService>();
@@ -38,7 +35,6 @@ namespace CurrencyConverter.API
             }
 
             app.UseAuthorization();
-
 
             app.MapControllers();
 
