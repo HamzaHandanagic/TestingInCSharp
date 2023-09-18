@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DateTimeEdgeCases
 {
-    public class GreeterService
+    internal class GreeterService
     {
         private readonly IDateTimeProvider _dateTimeProvider;
         public GreeterService(IDateTimeProvider dateTimeProvider)
@@ -14,7 +14,7 @@ namespace DateTimeEdgeCases
             _dateTimeProvider = dateTimeProvider;
         }
 
-        public string GenerateGreetText()
+        internal string GenerateGreetText()
         {
             var dateTimeNow = _dateTimeProvider.Now;
             return dateTimeNow.Hour switch
