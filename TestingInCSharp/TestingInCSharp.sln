@@ -15,13 +15,19 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "2.CodeReuse", "2.CodeReuse"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "User", "1.UnitTesting\2.CodeReuse\User\User.csproj", "{02E1A88F-957F-420E-A948-5D4BB41BDA9B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "User.Tests.Unit", "1.UnitTesting\2.CodeReuse\User.Tests.Unit\User.Tests.Unit.csproj", "{80EB3352-9204-442C-AB1A-B205C57E848E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "User.Tests.Unit", "1.UnitTesting\2.CodeReuse\User.Tests.Unit\User.Tests.Unit.csproj", "{80EB3352-9204-442C-AB1A-B205C57E848E}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3.DeepDive", "3.DeepDive", "{C8EBE7AC-6377-4CED-8666-7CB32C55A08A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CurrencyConverter.API.Tests.Unit", "1.UnitTesting\3.DeepDive\CurrencyConverter.API.Tests.Unit\CurrencyConverter.API.Tests.Unit.csproj", "{3804730B-3598-43F9-A507-EFF1081DAF10}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CurrencyConverter.API.Tests.Unit", "1.UnitTesting\3.DeepDive\CurrencyConverter.API.Tests.Unit\CurrencyConverter.API.Tests.Unit.csproj", "{3804730B-3598-43F9-A507-EFF1081DAF10}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CurrencyConverter.API", "1.UnitTesting\3.DeepDive\CurrencyConverter.API\CurrencyConverter.API.csproj", "{689ED0B6-0CA8-48D7-BBD2-23F21BD79882}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CurrencyConverter.API", "1.UnitTesting\3.DeepDive\CurrencyConverter.API\CurrencyConverter.API.csproj", "{689ED0B6-0CA8-48D7-BBD2-23F21BD79882}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4.DealingWithDateTime", "4.DealingWithDateTime", "{27E752A0-89B1-4575-A5FC-DD80F391C278}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DateTimeEdgeCases", "1.UnitTesting\4.DealingWithDateTime\DateTimeEdgeCases\DateTimeEdgeCases.csproj", "{C5E6FFBA-E850-447D-8EFE-E79834DE4E63}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DateTimeEdgeCases.Tests.Unit", "1.UnitTesting\4.DealingWithDateTime\DateTimeEdgeCases.Tests.Unit\DateTimeEdgeCases.Tests.Unit.csproj", "{A150FA17-8210-4796-8F42-134C05837EDB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -53,6 +59,14 @@ Global
 		{689ED0B6-0CA8-48D7-BBD2-23F21BD79882}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{689ED0B6-0CA8-48D7-BBD2-23F21BD79882}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{689ED0B6-0CA8-48D7-BBD2-23F21BD79882}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C5E6FFBA-E850-447D-8EFE-E79834DE4E63}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C5E6FFBA-E850-447D-8EFE-E79834DE4E63}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C5E6FFBA-E850-447D-8EFE-E79834DE4E63}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C5E6FFBA-E850-447D-8EFE-E79834DE4E63}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A150FA17-8210-4796-8F42-134C05837EDB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A150FA17-8210-4796-8F42-134C05837EDB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A150FA17-8210-4796-8F42-134C05837EDB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A150FA17-8210-4796-8F42-134C05837EDB}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -67,6 +81,9 @@ Global
 		{C8EBE7AC-6377-4CED-8666-7CB32C55A08A} = {05CDC1A0-B106-4A65-B183-46737E107176}
 		{3804730B-3598-43F9-A507-EFF1081DAF10} = {C8EBE7AC-6377-4CED-8666-7CB32C55A08A}
 		{689ED0B6-0CA8-48D7-BBD2-23F21BD79882} = {C8EBE7AC-6377-4CED-8666-7CB32C55A08A}
+		{27E752A0-89B1-4575-A5FC-DD80F391C278} = {05CDC1A0-B106-4A65-B183-46737E107176}
+		{C5E6FFBA-E850-447D-8EFE-E79834DE4E63} = {27E752A0-89B1-4575-A5FC-DD80F391C278}
+		{A150FA17-8210-4796-8F42-134C05837EDB} = {27E752A0-89B1-4575-A5FC-DD80F391C278}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {13D3FD6D-6C89-455F-881B-07F2D846284E}
