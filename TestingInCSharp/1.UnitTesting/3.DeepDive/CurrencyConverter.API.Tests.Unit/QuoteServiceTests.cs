@@ -14,6 +14,8 @@ using FluentAssertions;
 using NSubstitute;
 using CurrencyConverter.API.Exceptions;
 using NSubstitute.ReturnsExtensions;
+using CurrencyConverter.API.Logger;
+using Xunit.Abstractions;
 
 namespace CurrencyConverter.API.Tests.Unit
 {
@@ -22,7 +24,7 @@ namespace CurrencyConverter.API.Tests.Unit
     {
         private readonly QuoteService _sut;
         private readonly IRatesRepository _ratesRepository = Substitute.For<IRatesRepository>();
-        private readonly ILogger<QuoteService> _logger = new NullLogger<QuoteService>();
+        private ILoggerAdapter<QuoteService> _logger = Substitute.For<ILoggerAdapter<QuoteService>>();
 
         public QuoteServiceTests()
         {
@@ -45,7 +47,7 @@ namespace CurrencyConverter.API.Tests.Unit
             };
 
             //  In order to make the GetRateAsync method of the IRatesRepository to return that rate
-            //  all we need to do is invoke it and chain the Returns method with the expected rate.
+            //  we need to do is invoke it and chain the Returns method with the expected rate.
             _ratesRepository.GetRateAsync(fromCurrency, toCurrency).Returns(expectedRate);
 
             var expectedQuote = new ConversionQuote
@@ -114,6 +116,35 @@ namespace CurrencyConverter.API.Tests.Unit
             await resultAction.Should()
                 .ThrowAsync<SameCurrencyException>()
                 .WithMessage($"You cannot convert currency {fromCurrency} to itself");
+        }
+
+        [Fact]
+        public async Task GetQuoteAsync_ShouldLogAppropriateMessage_WhenInvoked()
+        {
+            // Arrange
+            var fromCurrency = "GBP";
+            var toCurrency = "USD";
+            var amount = 100;
+            var expectedRate = new CurrencyRate
+            {
+                FromCurrency = fromCurrency,
+                ToCurrency = toCurrency,
+                TimestampUtc = DateTime.UtcNow,
+                Rate = 1.6m
+            };
+
+            _ratesRepository.GetRateAsync(fromCurrency, toCurrency)
+                .Returns(expectedRate);
+
+            // Act
+            await _sut.GetQuoteAsync(fromCurrency, toCurrency, amount);
+
+            // Assert
+            _logger.Received(1)
+             .LogInformation("Retrieved quote for currencies {FromCurrency}->{ToCurrency} in {ElapsedMilliseconds}ms",
+                 Arg.Is<object[]>(x =>
+                    x[0].ToString() == fromCurrency &&
+                    x[1].ToString() == toCurrency));
         }
 
     }
