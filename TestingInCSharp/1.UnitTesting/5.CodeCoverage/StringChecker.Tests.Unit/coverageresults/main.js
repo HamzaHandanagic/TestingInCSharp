@@ -221,7 +221,7 @@ var assemblies = [
   {
     "name": "StringChecker",
     "classes": [
-      { "name": "StringChecker.StringChecker", "rp": "StringChecker_StringChecker.html", "cl": 5, "ucl": 1, "cal": 6, "tl": 15, "cb": 1, "tb": 2, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
+      { "name": "StringChecker.StringChecker", "rp": "StringChecker_StringChecker.html", "cl": 3, "ucl": 0, "cal": 3, "tl": 10, "cb": 0, "tb": 0, "cm": 0, "tm": 0, "lch": [], "bch": [], "mch": [], "hc": [], "metrics": { } },
     ]},
 ];
 
