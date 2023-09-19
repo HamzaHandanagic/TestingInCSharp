@@ -25,9 +25,15 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CurrencyConverter.API", "1.
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4.DealingWithDateTime", "4.DealingWithDateTime", "{27E752A0-89B1-4575-A5FC-DD80F391C278}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DateTimeEdgeCases", "1.UnitTesting\4.DealingWithDateTime\DateTimeEdgeCases\DateTimeEdgeCases.csproj", "{C5E6FFBA-E850-447D-8EFE-E79834DE4E63}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DateTimeEdgeCases", "1.UnitTesting\4.DealingWithDateTime\DateTimeEdgeCases\DateTimeEdgeCases.csproj", "{C5E6FFBA-E850-447D-8EFE-E79834DE4E63}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DateTimeEdgeCases.Tests.Unit", "1.UnitTesting\4.DealingWithDateTime\DateTimeEdgeCases.Tests.Unit\DateTimeEdgeCases.Tests.Unit.csproj", "{A150FA17-8210-4796-8F42-134C05837EDB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DateTimeEdgeCases.Tests.Unit", "1.UnitTesting\4.DealingWithDateTime\DateTimeEdgeCases.Tests.Unit\DateTimeEdgeCases.Tests.Unit.csproj", "{A150FA17-8210-4796-8F42-134C05837EDB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5.CodeCoverage", "5.CodeCoverage", "{FBF1189B-E0A5-436F-B5EE-1716EBFFE3B5}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StringChecker", "1.UnitTesting\5.CodeCoverage\StringChecker\StringChecker.csproj", "{C0F5A264-7E50-45E8-9691-6F7AF121336F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StringChecker.Tests.Unit", "1.UnitTesting\5.CodeCoverage\StringChecker.Tests.Unit\StringChecker.Tests.Unit.csproj", "{F1EF784D-BE95-43F3-A8DC-35058CCB68E2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -67,6 +73,14 @@ Global
 		{A150FA17-8210-4796-8F42-134C05837EDB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A150FA17-8210-4796-8F42-134C05837EDB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A150FA17-8210-4796-8F42-134C05837EDB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C0F5A264-7E50-45E8-9691-6F7AF121336F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C0F5A264-7E50-45E8-9691-6F7AF121336F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C0F5A264-7E50-45E8-9691-6F7AF121336F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C0F5A264-7E50-45E8-9691-6F7AF121336F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F1EF784D-BE95-43F3-A8DC-35058CCB68E2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F1EF784D-BE95-43F3-A8DC-35058CCB68E2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F1EF784D-BE95-43F3-A8DC-35058CCB68E2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F1EF784D-BE95-43F3-A8DC-35058CCB68E2}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -84,6 +98,9 @@ Global
 		{27E752A0-89B1-4575-A5FC-DD80F391C278} = {05CDC1A0-B106-4A65-B183-46737E107176}
 		{C5E6FFBA-E850-447D-8EFE-E79834DE4E63} = {27E752A0-89B1-4575-A5FC-DD80F391C278}
 		{A150FA17-8210-4796-8F42-134C05837EDB} = {27E752A0-89B1-4575-A5FC-DD80F391C278}
+		{FBF1189B-E0A5-436F-B5EE-1716EBFFE3B5} = {05CDC1A0-B106-4A65-B183-46737E107176}
+		{C0F5A264-7E50-45E8-9691-6F7AF121336F} = {FBF1189B-E0A5-436F-B5EE-1716EBFFE3B5}
+		{F1EF784D-BE95-43F3-A8DC-35058CCB68E2} = {FBF1189B-E0A5-436F-B5EE-1716EBFFE3B5}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {13D3FD6D-6C89-455F-881B-07F2D846284E}
