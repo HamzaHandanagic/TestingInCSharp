@@ -1,4 +1,5 @@
 ﻿using CurrencyConverter.API.Exceptions;
+using CurrencyConverter.API.Logger;
 using CurrencyConverter.API.Models;
 using CurrencyConverter.API.Repositories;
 using System.Diagnostics;
@@ -8,9 +9,9 @@ namespace CurrencyConverter.API.Services
     public class QuoteService : IQuoteService
     {
         private readonly IRatesRepository _ratesRepository;
-        private readonly ILogger _logger;
+        private readonly ILoggerAdapter<QuoteService> _logger;
 
-        public QuoteService(IRatesRepository ratesRepository, ILogger logger)
+        public QuoteService(IRatesRepository ratesRepository, ILoggerAdapter<QuoteService> logger)
         {
             _ratesRepository = ratesRepository;
             _logger = logger;
