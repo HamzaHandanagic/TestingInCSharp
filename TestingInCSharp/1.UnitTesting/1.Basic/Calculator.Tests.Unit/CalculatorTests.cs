@@ -25,6 +25,44 @@ namespace Calculator.Tests.Unit
         }
 
         /// <summary>
+        /// Skip tests based on certain conditions. Environment variable or read it from appSettings.
+        /// </summary>
+        #if IS_LINUX
+        [Fact(Skip = "Doesn't work at the moment"]
+        public void Test_SkipIf()
+        {
+            var result = new Calculator().Add(1, 2);
+            if (result != 3)
+            {
+                throw new Exception("Result wasn't 3");
+            }
+        }
+        #endif
+
+        /// <summary>
+        /// Skip tests based on certain conditions
+        /// </summary>
+        [Fact(Skip = "Doesn't work at the moment"]
+        public void Test_SkipIf()
+        {
+            var result = new Calculator().Add(1, 2);
+            if (result != 3)
+            {
+                throw new Exception("Result wasn't 3");
+            }
+        }
+
+        [Fact]
+        public void TestException()
+        {
+            var result = new Calculator().Add(1, 2);
+            if (result != 3)
+            {
+                throw new Exception("Result wasn't 3");
+            }
+        }
+
+        /// <summary>
         /// Proper naming of a test using <method_name>
         /// </summary>
         [Fact]
